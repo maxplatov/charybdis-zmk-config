@@ -55,19 +55,19 @@
 
         default_layer {
             bindings = <
-&kp TAB     &kp Q  &kp W  &kp E     &kp R        &kp T        &kp Y            &kp U          &kp I      &kp O    &kp P     &kp LBKT
-&kp LCTRL   &kp A  &kp S  &kp D     &lt 4 F      &kp G        &kp H            &lt 5 J        &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHIFT  &kp Z  &kp X  &kp C     &kp V        &kp B        &kp N            &kp M          &kp COMMA  &kp DOT  &kp FSLH  &mt LS(LA(RS(RA(RIGHT_ALT)))) DELETE
-                          &kp LGUI  &lt 1 SPACE  &lt 3 RET    &lt 2 BACKSPACE  &kp BACKSPACE
+&kp TAB     &kp Q  &kp W  &kp E     &kp R            &kp T        &kp Y        &kp U          &kp I      &kp O    &kp P     &kp LBKT
+&kp LCTRL   &kp A  &kp S  &kp D     &lt 4 F          &kp G        &kp H        &kp J          &kp K      &kp L    &kp SEMI  &kp SQT
+&kp LSHIFT  &kp Z  &kp X  &kp C     &kp V            &kp B        &kp N        &kp M          &kp COMMA  &kp DOT  &kp FSLH  &mt LS(LA(RS(RA(RIGHT_ALT)))) DELETE
+                          &kp LGUI  &lt 1 RIGHT_WIN  &lt 3 RET    &lt 2 SPACE  &kp BACKSPACE
             >;
         };
 
         lower_layer {
             bindings = <
-&kp ESC    &kp N1           &kp N2           &kp N3           &kp N4   &kp N5       &kp MINUS      &kp EQUAL       &kp UP_ARROW     &kp UNDER        &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&kp LCTRL  &kp N6           &kp N7           &kp N8           &kp N9   &kp N0       &kp PAGE_UP    &kp LEFT_ARROW  &kp DOWN_ARROW   &kp RIGHT_ARROW  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
-&kp LALT   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &macro1  &macro2      &kp PAGE_DOWN  &kp LEFT_BRACE  &kp RIGHT_BRACE  &none            &none                 &none
-                                             &kp LSHFT        &trans   &kp ENTER    &trans         &kp BACKSPACE
+&kp ESC    &kp N1           &kp N2           &kp N3           &kp N4   &kp N5       &kp MINUS      &kp EQUAL       &kp UP_ARROW    &kp PLUS         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&kp LCTRL  &kp N6           &kp N7           &kp N8           &kp N9   &kp N0       &kp PAGE_UP    &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
+&kp LALT   &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &macro1  &macro2      &kp PAGE_DOWN  &kp UNDER       &none           &none            &kp LEFT_BRACE        &kp RIGHT_BRACE
+                                             &kp LSHFT        &trans   &kp ENTER    &kp SPACE      &kp BACKSPACE
             >;
         };
 
@@ -82,10 +82,10 @@
 
         adjust_layer {
             bindings = <
-&sys_reset    &bootloader   &none         &macro3       &kp C_VOLUME_DOWN  &kp C_VOLUME_UP    &kp KP_NUMLOCK  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none  &kp BACKSPACE
-&bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3       &bt BT_SEL 4       &none           &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none  &none
-&out OUT_TOG  &none         &none         &none         &kp C_PLAY         &kp C_NEXT         &kp KP_COMMA    &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &none  &kp DELETE
-                                          &trans        &none              &trans             &kp ENTER       &kp KP_NUMBER_0
+&sys_reset    &bootloader   &none         &kp LG(LS(NUMBER_4))  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP    &kp KP_NUMLOCK  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &none  &kp BACKSPACE
+&bt BT_CLR    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2          &kp C_PLAY         &kp C_NEXT         &none           &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &none  &none
+&out OUT_TOG  &none         &none         &none                 &kp C_PLAY         &kp C_NEXT         &kp KP_COMMA    &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &none  &kp DELETE
+                                          &trans                &none              &trans             &kp ENTER       &kp KP_NUMBER_0
             >;
         };
 
@@ -95,15 +95,6 @@
 &trans  &trans  &trans  &trans     &trans  &trans       &trans  &mkp RCLK  &mkp LCLK  &trans  &trans  &trans
 &trans  &trans  &trans  &trans     &trans  &trans       &trans  &trans     &trans     &trans  &trans  &trans
                         &mkp RCLK  &trans  &mkp LCLK    &trans  &trans
-            >;
-        };
-
-        caps_layer {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans    &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &kp CAPS  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans    &trans  &trans
-                        &trans  &trans  &trans    &trans  &trans
             >;
         };
     };
